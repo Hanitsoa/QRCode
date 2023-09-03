@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: slateblue;
+}
+#container {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border: 1px solid gray;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #212E53;
+    transform: translate(-50%, -50%);
+}
+#container h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    background-image: linear-gradient(to right, pink, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.qr-code input {
+    width: 100%;
+    height: 50%;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 10px;
+    border-radius: 5px;
+}
+.qr-code button {
+    width: 100%;
+    height: 50%;
+    outline: 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.qr-code-img img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 35%;
+}
+.qr-code-img {
+    display: none;
+}
+.active {
+    display: block;
+}
+.erreur {
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 425px) {
+    #container {
+        width: 95%;
+        text-align: center;
+    }
+    .qr-code-img img {
+        margin-left: 0;
+    }
+}
